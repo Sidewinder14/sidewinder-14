@@ -57,13 +57,13 @@
     tags:
     - Screwdriver
   - type: Sprite
-    sprite: Objects/Tools/screwdriver.rsi
+    sprite: _Sidewinder/Objects/Tools/screwdriver.rsi
     layers:
       - state: screwdriver
         map: [ "enum.DamageStateVisualLayers.Base" ]
       - state: screwdriver-screwybits
   - type: Item
-    sprite: Objects/Tools/screwdriver.rsi
+    sprite: _Sidewinder/Objects/Tools/screwdriver.rsi
     storedRotation: -90
   - type: MeleeWeapon
     wideAnimationRotation: -90
