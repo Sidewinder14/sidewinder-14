@@ -1,0 +1,53 @@
+- type: entity
+  parent: BaseItem
+  name: mop
+  id: SWMop
+  description: An old mop, has a pungent smell.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Specific/Janitorial/mop.rsi
+    layers:
+      - state: mop
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: fill-3
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: fill-
+    inHandsFillBaseName: -fill-
+    inHandsMaxFillLevels: 2
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+  - type: Spillable
+    solution: absorbed
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 5
+  - type: Item
+    size: Large
+    sprite: _Sidewinder/Objects/Specific/Janitorial/mop.rsi
+  - type: Absorbent
+  - type: SolutionContainerManager
+    solutions:
+      absorbed:
+        maxVol: 100
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: Tag
+    tags:
+      - SWMop
+      - SWMopBasic
+  - type: GuideHelp
+    guides:
+    - Janitorial
+  - type: DnaSubstanceTrace
