@@ -12,10 +12,7 @@
     - SWScrewdriver
   - type: Sprite
     sprite: _Sidewinder/Objects/Tools/screwdriver.rsi
-    layers:
-      - state: screwdriver
-        map: [ "enum.DamageStateVisualLayers.Base" ]
-      - state: screwdriver-screwybits
+    state: screwdriver
   - type: Item
     sprite: _Sidewinder/Objects/Tools/screwdriver.rsi
     storedRotation: -90

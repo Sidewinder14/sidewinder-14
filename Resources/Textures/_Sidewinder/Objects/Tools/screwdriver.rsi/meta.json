@@ -11,12 +11,6 @@
       "name": "screwdriver"
     },
     {
-      "name": "screwdriver-map"
-    },
-    {
-      "name": "screwdriver-screwybits"
-    },
-    {
       "name": "inhand-left",
       "directions": 4
     },
