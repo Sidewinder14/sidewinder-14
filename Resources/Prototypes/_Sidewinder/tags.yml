@@ -4,6 +4,9 @@
   id: Prybar
 
 - type: Tag
+  id: SWMultitool
+
+- type: Tag
   id: SWScrewdriver
 
 - type: Tag
