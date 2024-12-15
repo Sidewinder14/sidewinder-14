@@ -1,2 +1,29 @@
+# PUT YOUR TAGS IN ALPHABETICAL ORDER
+
 - type: Tag
+  id: Prybar
+
+- type: Tag 
   id: SWGasTank
+
+- type: Tag
+  id: SWMop
+  
+- type: Tag
+  id: SWMopBasic
+
+- type: Tag
+  id: SWMultitool
+
+- type: Tag
+  id: SWScrewdriver
+
+- type: Tag
+  id: SWWirecutter
+
+- type: Tag
+  id: SWWrench
+
+# PUT YOUR TAGS IN ALPHABETICAL ORDER
+
+>>>>>>> 2867fd8ae61df3be04b7148a152ca49cadf13e85

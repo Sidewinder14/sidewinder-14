@@ -1,0 +1,645 @@
+- type: entity
+  abstract: true
+  parent: [ BaseItem, StorePresetUplink ] #PDA's have uplinks so they have to inherit the data.
+  id: BaseAdminPDA
+  name: PDA
+  description: Personal Data Assistant.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Devices/wallet.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Sidewinder/Objects/Devices/wallet.rsi
+    state: pda
+  - type: Pda
+    state: pda
+    paiSlot:
+      priority: -2
+      whitelist:
+        components:
+        - PAI
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+    idSlot:
+      name: access-id-card-component-default
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - IdCard
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      PDA-id: !type:ContainerSlot {}
+      PDA-pen: !type:ContainerSlot {}
+      PDA-pai: !type:ContainerSlot {}
+      Cartridge-Slot: !type:ContainerSlot {}
+      program-container: !type:Container
+  - type: ItemSlots
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - idcard
+    - Belt
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    softness: 5
+    autoRot: true
+  - type: Ringer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: PDA
+    prefix: device-address-prefix-console
+    savableAddress: false
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NewsReaderCartridge
+    cartridgeSlot:
+      priority: -1
+      name: device-pda-slot-component-slot-name-cartridge
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+          - Cartridge
+  - type: ActivatableUI
+    key: enum.PdaUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.PdaUiKey.Key:
+        type: PdaBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+      enum.RingerUiKey.Key:
+        type: RingerBoundUserInterface
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+      enum.HealthAnalyzerUiKey.Key:
+        type: HealthAnalyzerBoundUserInterface
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Input
+    context: "human"
+  - type: SentienceTarget # sentient PDA = pAI lite
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
+  - type: BlockMovement
+    blockInteraction: false # lets the PDA toggle its own flashlight
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+
+- type: entity
+  abstract: true
+  parent: [ BaseItem ] #PDA's have uplinks so they have to inherit the data.
+  id: BaseWallet
+  name: Wallet
+  description: Stores all your identification.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Devices/wallet.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Sidewinder/Objects/Devices/wallet.rsi
+    state: wallet
+  - type: Pda
+    state: wallet
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+    idSlot:
+      name: access-id-card-component-default
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - IdCard
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      PDA-id: !type:ContainerSlot {}
+      PDA-pen: !type:ContainerSlot {}
+      PDA-pai: !type:ContainerSlot {}
+      Cartridge-Slot: !type:ContainerSlot {}
+      program-container: !type:Container
+  - type: ItemSlots
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - idcard
+    - Belt
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Input
+    context: "human"
+
+- type: entity
+  parent: BaseWallet
+  id: WalletCitizen
+  name: citizen wallet
+  description: A brown leather wallet, devoid of any patches or markings. Held by most citizens.
+  components:
+  - type: Pda
+    id: PassengerIDCard
+    state: wallet
+
+- type: entity
+  parent: BaseWallet
+  id: WalletBarkeep
+  name: barkeep wallet
+  description: A stained leather wallet, smells like beer.
+  components:
+  - type: Pda
+    id: BartenderIDCard
+    state: wallet-barkeep
+  - type: Icon
+    state: wallet-barkeep
+
+- type: entity
+  parent: BaseWallet
+  id: WalletDoctor
+  name: doctor wallet
+  description: A once sterile white wallet, now stained with dried blood and dirt.
+  components:
+  - type: Pda
+    id: MedicalIDCard
+    state: wallet-doctor
+  - type: Icon
+    state: wallet-doctor
+
+- type: entity
+  parent: BaseWallet
+  id: WalletJrDoctor
+  name: junior doctor wallet
+  description: A relatively clean wallet, only having small specs of dirt and dried blood.
+  components:
+  - type: Pda
+    id: MedicalInternIDCard
+    state: wallet-jrdoctor
+  - type: Icon
+    state: wallet-jrdoctor
+
+- type: entity
+  parent: BaseWallet
+  id: WalletChemist
+  name: chemist wallet
+  description: A white leather wallet, a patch portraying three vials is stitched onto the front of it.
+  components:
+  - type: Pda
+    id: ChemistIDCard
+    state: wallet-chemist
+  - type: Icon
+    state: wallet-chemist
+
+- type: entity
+  parent: BaseWallet
+  id: WalletCargoHauler
+  name: cargo hauler wallet
+  description: A beige wallet. A patch resembling train tracks is stitched onto the front.
+  components:
+  - type: Pda
+    id: CargoIDCard
+    state: wallet-cargohauler
+  - type: Icon
+    state: wallet-cargohauler
+
+- type: entity
+  parent: BaseWallet
+  id: WalletShaftMiner
+  name: shaft miner wallet
+  description: A beige wallet. Covered in dirt and iron residue.
+  components:
+  - type: Pda
+    id: SalvageIDCard
+    state: wallet-shaftminer
+  - type: Icon
+    state: wallet-shaftminer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletCourier
+  name: courier wallet
+  description: A beige wallet. A patch resembling a envelope is stitched onto the face of it.
+  components:
+  - type: Pda
+    id: CargoIDCard #TODO: Change ID fron CargoIDCard to MailIDCard (make it)
+    state: wallet-courier
+  - type: Icon
+    state: wallet-courier
+
+- type: entity
+  parent: BaseWallet
+  id: WalletFarmer
+  name: farmer wallet
+  description: A brown wallet, covered in dirt. Has an earthy scent.
+  components:
+  - type: Pda
+    id: BotanistIDCard
+    state: wallet-farmer
+  - type: Icon
+    state: wallet-farmer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletClown
+  name: clown wallet
+  description: A once brown wallet, dipped in some unknown pink substance. Its oddly slippery.
+  components:
+  - type: Pda
+    id: ClownIDCard
+    state: wallet-clown
+    penSlot:
+      startingItem: CrayonOrange # no pink crayon?!?
+      # ^ Still unacceptable.
+      # ^ I would have to concur.
+      ejectSound: /Audio/Items/bikehorn.ogg
+      priority: -1
+  - type: Icon
+    state: wallet-clown
+  - type: Slippery
+  - type: StepTrigger
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.3"
+        hard: false
+        layer:
+          - SlipLayer
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.3"
+        density: 5
+        mask:
+        - ItemMask
+
+- type: entity
+  parent: BaseWallet
+  id: WalletCook
+  name: cook wallet
+  description: A brown wallet, covered in dried animal blood. A path with a cleaver on it is stitched to the front.
+  components:
+  - type: Pda
+    id: ChefIDCard
+    state: wallet-cook
+  - type: Icon
+    state: wallet-cook
+
+- type: entity
+  name: chaplin wallet
+  parent: BaseWallet
+  id: WalletChaplin
+  description: A holy brown wallet, a cross is stitched to the front.
+  components:
+  - type: Pda
+    id: ChaplainIDCard
+    state: wallet-chaplin
+  - type: Icon
+    state: wallet-chaplin
+
+- type: entity
+  parent: BaseWallet
+  id: WalletReporter
+  name: reporter wallet
+  description: A brown wallet, a patch with a quill on it is stitched to the front. Smells like old ink.
+  components:
+  - type: Pda
+    id: ReporterIDCard
+    state: wallet-reporter
+    penSlot:
+      startingItem: LuxuryPen #Replace with Quill
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Icon
+    state: wallet-reporter
+
+- type: entity
+  parent: BaseWallet
+  id: WalletRescuer
+  name: rescuer wallet
+  description: A sterile white wallet, small specs of dirt cover the lower half of it.
+  components:
+  - type: Pda
+    id: ParamedicIDCard
+    state: wallet-rescuer
+  - type: Icon
+    state: wallet-rescuer
+
+- type: entity
+  parent: BaseAdminPDA
+  id: WalletAdmin
+  name: admin wallet
+  suffix: Admin
+  description: If you are not an admin please return this wallet to the nearest admin.
+  components:
+  - type: Pda
+    id: UniversalIDCard
+    state: wallet-admin
+  - type: Icon
+    state: wallet-admin
+  - type: HealthAnalyzer
+    scanDelay: 0
+    silent: true
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NewsReaderCartridge
+      - LogProbeCartridge
+      - WantedListCartridge
+
+- type: entity
+  parent: BaseWallet
+  id: WalletJuniorDeputy
+  name: junior deputy wallet
+  description: A black leather wallet, has a badge clipped onto the front that reads "Junior Deputy".
+  components:
+  - type: Pda
+    id: SecurityCadetIDCard
+    state: wallet-jrdeputy
+  - type: Icon
+    state: wallet-jrdeputy
+
+- type: entity
+  parent: BaseWallet
+  id: WalletPrivateInvestigator
+  name: P. investigator wallet
+  description: A black leather wallet, has a magnifying glass stitched to the front. Smells like smoke.
+  components:
+  - type: Pda
+    id: DetectiveIDCard
+    state: wallet-privateinvestigator
+  - type: Icon
+    state: wallet-privateinvestigator
+
+- type: entity
+  parent: BaseWallet
+  id: WalletDeputy
+  name: deputy wallet
+  description: A black leather wallet, has a badge clipped onto the front that reads "Deputy".
+  components:
+  - type: Pda
+    id: SecurityIDCard
+    state: wallet-deputy
+  - type: Icon
+    state: wallet-deputy
+
+- type: entity
+  parent: BaseWallet
+  id: WalletJailer
+  name: jailer wallet
+  description: A black leather wallet, has a patch portraying cell bars on it. Smells like justice.
+  components:
+  - type: Pda
+    id: WardenIDCard
+    state: wallet-jailer
+  - type: Icon
+    state: wallet-jailer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletEngineer
+  name: engineer wallet
+  description: A orange-ish wallet, smells like oil and grease. A Wrench is stitched onto the front.
+  components:
+  - type: Pda
+    id: EngineeringIDCard
+    state: wallet-engineer
+  - type: Icon
+    state: wallet-engineer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletJrEngineer
+  name: junior engineer wallet
+  description: A orange-ish wallet, small splotches of oil are stained onto the front.
+  components:
+  - type: Pda
+    id: TechnicalAssistantIDCard
+    state: wallet-juniorengineer
+  - type: Icon
+    state: wallet-juniorengineer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletCraftsman
+  name: craftsman wallet
+  description: A orange-ish wallet, a patch protraying three nails is stitched to the front of it.
+  components:
+  - type: Pda
+    id: TechnicalAssistantIDCard #TODO: Make a Crafstman ID/Key
+    state: wallet-craftsman
+  - type: Icon
+    state: wallet-craftsman
+
+- type: entity
+  parent: BaseWallet
+  id: WalletJrResearcher
+  name: junior researcher wallet
+  description: a wallet with purple trim, a patch with a lightbulb is stitched onto the front.
+  components:
+  - type: Pda
+    id: ResearchAssistantIDCard
+    state: wallet-juniorresearcher
+  - type: Icon
+    state: wallet-juniorresearcher
+
+- type: entity
+  parent: BaseWallet
+  id: WalletResearcher
+  name: researcher wallet
+  description: a white wallet with purple trim, smells like science.
+  components:
+  - type: Pda
+    id: ResearchIDCard
+    state: wallet-researcher
+  - type: Icon
+    state: wallet-researcher
+
+- type: entity
+  parent: BaseWallet
+  id: WalletMayor
+  name: mayor wallet
+  description: A mahogany wallet with gold trim, pristine.
+  components:
+  - type: Pda
+    id: CaptainIDCard
+    state: wallet-mayor
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Icon
+    state: wallet-mayor
+
+- type: entity
+  parent: BaseWallet
+  id: WalletSecretary
+  name: secretary wallet
+  description: A black leather wallet with gold trim. A piece of paper is stitched into the front of it with gold.
+  components:
+  - type: Pda
+    id: CaptainIDCard
+    state: wallet-secretary
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Icon
+    state: wallet-secretary
+
+- type: entity
+  parent: BaseWallet
+  id: WalletGovernment
+  name: government wallet
+  description: A black leather wallet with gold trim. nothing is stitched to the front, they mean business.
+  components:
+  - type: Pda
+    id: CentcomIDCard
+    state: wallet-cc
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Icon
+    state: wallet-cc
+
+- type: entity
+  parent: BaseWallet
+  id: WalletChiefEngineer
+  name: chief engineer wallet
+  description: A mahogany wallet with gold trim, a patch portraying a nut is stitched to the front in gold.
+  components:
+  - type: Pda
+    id: CEIDCard
+    state: wallet-chief-engineer
+  - type: Icon
+    state: wallet-chief-engineer
+
+- type: entity
+  parent: BaseWallet
+  id: WalletSurgeonGeneral
+  name: surgeon general wallet
+  description: A mahogany wallet with gold trim, a patch portraying a surture and needle is stitched to the front in gold.
+  components:
+  - type: Pda
+    id: CMOIDCard
+    state: wallet-surgeon-general
+  - type: Icon
+    state: wallet-surgeon-general
+
+- type: entity
+  parent: BaseWallet
+  id: WalletSheriff
+  name: sheriff wallet
+  description: A mahogany wallet with gold trim, smells like abuse of authority.
+  components:
+  - type: Pda
+    id: HoSIDCard
+    state: wallet-sheriff
+  - type: Icon
+    state: wallet-sheriff
+
+- type: entity
+  name: postmaster general wallet
+  parent: BaseWallet
+  id: WalletPostmasterGeneral
+  description: A mahogany wallet with gold trim, a patch portraying a envelope is stitched to the front in gold.
+  components:
+  - type: Pda
+    id: QuartermasterIDCard
+    state: wallet-postmaster-general
+  - type: Icon
+    state: wallet-postmaster-general
+
+- type: entity
+  parent: BaseWallet
+  id: WalletResearchDirector
+  name: research director wallet
+  description: A mahogany wallet with gold trim, it feels like progress.
+  components:
+  - type: Pda
+    id: RDIDCard
+    state: wallet-research-director
+  - type: Icon
+    state: wallet-research-director
+
+- type: entity
+  parent: BaseWallet
+  id: WalletSweeper
+  name: weeper wallet
+  description: A brown wallet, covered in dust and dirt.
+  components:
+  - type: Pda
+    id: JanitorIDCard
+    state: wallet-sweeper
+  - type: Icon
+    state: wallet-sweeper
+
+- type: entity
+  parent: BaseWallet
+  id: WalletSwitchboard
+  name: switchboard operator wallet
+  description: A beige wallet, a patch portraying a switchboard cord is stitched to the front.
+  components:
+  - type: Pda
+    id: CargoIDCard
+    state: wallet-switchboard
+  - type: Icon
+    state: wallet-switchboard

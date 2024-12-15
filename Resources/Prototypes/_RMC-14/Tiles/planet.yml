@@ -1,0 +1,256 @@
+- type: tile
+  abstract: true
+  id: RMC14PlanetBase
+  isSubfloor: true
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetDirt
+  name: tiles-rmc14-dirt
+  sprite: /Textures/_RMC-14/Tiles/planet/dirt.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetDesert
+  name: tiles-rmc14-desert
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetDesert1
+  name: tiles-rmc14-desert
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_0.png
+
+- type: tile
+  parent: RMC14PlanetDesert1
+  id: RMC14PlanetDesert2
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_1.png
+
+- type: tile
+  parent: RMC14PlanetDesert1
+  id: RMC14PlanetDesert3
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_2.png
+
+- type: tile
+  parent: RMC14PlanetDesert1
+  id: RMC14PlanetDesert4
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_3.png
+
+- type: tile
+  parent: RMC14PlanetDesert1
+  id: RMC14PlanetDesert5
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_4.png
+
+- type: tile
+  parent: RMC14PlanetDesert1
+  id: RMC14PlanetDesert6
+  sprite: /Textures/_RMC-14/Tiles/planet/desert/desert_5.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetSand
+  name: tiles-rmc14-sand
+  sprite: /Textures/_RMC-14/Tiles/planet/sand.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrass
+  name: tiles-rmc14-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrass1
+  name: tiles-rmc14-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass1/grass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_RMC-14/Tiles/planet/grass1/single_edge.png
+    NorthEast: /Textures/_RMC-14/Tiles/planet/grass1/single_edge.png
+    NorthWest: /Textures/_RMC-14/Tiles/planet/grass1/single_edge.png
+    SouthWest: /Textures/_RMC-14/Tiles/planet/grass1/single_edge.png
+    South: /Textures/_RMC-14/Tiles/planet/grass1/double_edge.png
+    East: /Textures/_RMC-14/Tiles/planet/grass1/double_edge.png
+    North: /Textures/_RMC-14/Tiles/planet/grass1/double_edge.png
+    West: /Textures/_RMC-14/Tiles/planet/grass1/double_edge.png
+  baseTurf: RMC14PlanetDirt
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrass2
+  name: tiles-rmc14-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass2/grass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_RMC-14/Tiles/planet/grass2/single_edge.png
+    NorthEast: /Textures/_RMC-14/Tiles/planet/grass2/single_edge.png
+    NorthWest: /Textures/_RMC-14/Tiles/planet/grass2/single_edge.png
+    SouthWest: /Textures/_RMC-14/Tiles/planet/grass2/single_edge.png
+    South: /Textures/_RMC-14/Tiles/planet/grass2/double_edge.png
+    East: /Textures/_RMC-14/Tiles/planet/grass2/double_edge.png
+    North: /Textures/_RMC-14/Tiles/planet/grass2/double_edge.png
+    West: /Textures/_RMC-14/Tiles/planet/grass2/double_edge.png
+  footstepSounds:
+    collection: FootstepAsteroid
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrass3
+  name: tiles-rmc14-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass3/grass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_RMC-14/Tiles/planet/grass3/single_edge.png
+    NorthEast: /Textures/_RMC-14/Tiles/planet/grass3/single_edge.png
+    NorthWest: /Textures/_RMC-14/Tiles/planet/grass3/single_edge.png
+    SouthWest: /Textures/_RMC-14/Tiles/planet/grass3/single_edge.png
+    South: /Textures/_RMC-14/Tiles/planet/grass3/double_edge.png
+    East: /Textures/_RMC-14/Tiles/planet/grass3/double_edge.png
+    North: /Textures/_RMC-14/Tiles/planet/grass3/double_edge.png
+    West: /Textures/_RMC-14/Tiles/planet/grass3/double_edge.png
+  footstepSounds:
+    collection: FootstepAsteroid
+
+# TODO CM14 scoched dirt grass
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrassDirt1
+  name: tiles-rmc14-dirt-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass1/grass.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrassDirtCorner2
+  name: tiles-rmc14-dirt-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass1/grass.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGrassDirt2
+  name: tiles-rmc14-dirt-grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass2/grass.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetWood
+  name: tiles-rmc14-wood
+  sprite: /Textures/_RMC-14/Tiles/planet/wood/wood.png
+  footstepSounds:
+    collection: FootstepWood
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetMattedGrass
+  name: matted grass
+  sprite: /Textures/_RMC-14/Tiles/planet/auto_strata_grass/grass.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  footstepSounds:
+    collection: FootstepWood
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetRunedSandstone
+  name: runed sandstone
+  sprite: /Textures/_RMC-14/Tiles/planet/runed_sandstone/runedsandstone.png
+  footstepSounds:
+    collection: FootstepWood
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetGCircuit
+  name: gcircuit
+  sprite: /Textures/_RMC-14/Tiles/planet/gcircuit/gcircuita.png
+  footstepSounds:
+    collection: FootstepHull
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetShuttleBlue
+  name: blue shuttle
+  sprite: /Textures/_RMC-14/Tiles/planet/shuttle/floor.png
+  footstepSounds:
+    collection: FootstepHull
+
+- type: tile
+  parent: RMC14PlanetShuttleBlue
+  id: RMC14PlanetShuttleRed
+  name: red shuttle
+  sprite: /Textures/_RMC-14/Tiles/planet/shuttle/floor4.png
+
+- type: tile
+  parent: RMC14PlanetShuttleBlue
+  id: RMC14PlanetShuttleDarkRed
+  name: dark red shuttle
+  sprite: /Textures/_RMC-14/Tiles/planet/shuttle/floor6.png
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetCorsatSquare
+  name: corsat squares
+  sprite: /Textures/_RMC-14/Tiles/planet/corsat/squares.png
+  footstepSounds:
+    collection: FootstepHull
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetCorsatSquareWood
+  name: corsat squares wood
+  sprite: /Textures/_RMC-14/Tiles/planet/corsat/squareswood.png
+  footstepSounds:
+    collection: FootstepWood
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetStrata
+  name: strata
+  sprite: /Textures/_RMC-14/Tiles/planet/strata/floor.png
+  footstepSounds:
+    collection: FootstepHull
+
+- type: tile
+  parent: RMC14PlanetStrata
+  id: RMC14PlanetStrataMultiTiles
+  name: strata multi tiles
+  sprite: /Textures/_RMC-14/Tiles/planet/strata/multi_tiles.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: RMC14PlanetBase
+  id: RMC14PlanetBeachGrass
+  name: beach grass
+  sprite: /Textures/_RMC-14/Tiles/planet/grass2/grass.png
