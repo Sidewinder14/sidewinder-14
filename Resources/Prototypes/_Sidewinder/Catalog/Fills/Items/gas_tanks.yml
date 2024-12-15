@@ -1,0 +1,79 @@
+# Moles calculation
+#
+#   moles = 1000 / (8.31446261 * 293.15 / volume)
+#
+#   More practically:
+#
+#   moles = volume * 0.41027581
+#
+#   Yes, you do need all those digits or your pressure wont end up exactly 1000
+#
+#
+# The number 1000 comes from the default MaxReleasePressure for a GasCanister,
+# which is 10 * Atmospherics.OneAtmosphere, rounded down.
+#
+# 8.31446261 is the universal gas constant
+#
+# 293.15 is our default atmospheric temperature
+#
+
+# If you change the mole amounts, you can calculate the new gas supply times with:
+# minutes = (moles / outputPressure) * 325
+
+- type: entity
+  id: SWOxygenTankFilled
+  parent: SWOxygenTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        - 2.051379050 # oxygen
+      temperature: 293.15
+
+- type: entity
+  id: SWEmergencyOxygenTankFilled
+  parent: SWEmergencyOxygenTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 4 minutes
+      volume: 0.66
+      moles:
+        - 0.270782035 # oxygen
+      temperature: 293.15
+
+- type: entity
+  id: SWEmergencyNitrogenTankFilled
+  parent: SWEmergencyNitrogenTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 4 minutes
+      volume: 0.66
+      moles:
+        - 0 # oxygen
+        - 0.270782035 # nitrogen
+      temperature: 293.15
+
+- type: entity
+  id: SWNitrogenTankFilled
+  parent: SWNitrogenTank
+  suffix: Filled
+  name: nitrogen tank
+  components:
+  - type: GasTank
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        - 0           # oxygen not included
+        - 2.051379050 # nitrogen
+      temperature: 293.15
