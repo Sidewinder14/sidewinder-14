@@ -98,7 +98,7 @@
   description: A bomb for Syndicate operatives and agents alike. The real deal, no more training, get to it!
   components:
     - type: Sprite
-      sprite: Structures/Machines/bomb.rsi
+      sprite: _Sidewinder/Structures/Machines/bomb.rsi
       layers:
         - state: syndicate-bomb
         - state: syndicate-bomb-active
