@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Wallet sprites made by icepicked (Github and Discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "id_overlay"
+    },
+    {
+      "name": "equipped-BELT",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "insert_overlay"
+    },
+    {
+      "name": "light_overlay"
+    },
+    {
+      "name": "wallet"
+    },
+    {
+      "name": "wallet-barkeep"
+    },
+    {
+      "name": "wallet-mayor"
+    },
+    {
+      "name": "wallet-secretary"
+    },
+    {
+      "name": "wallet-cc"
+    },
+    {
+      "name": "wallet-chief-engineer"
+    },
+    {
+      "name": "wallet-surgeon-general"
+    },
+    {
+      "name": "wallet-sheriff"
+    },
+    {
+      "name": "wallet-postmaster-general"
+    },
+    {
+      "name": "wallet-research-director"
+    },
+    {
+      "name": "wallet-cargohauler"
+    },
+    {
+      "name": "wallet-chaplin"
+    },
+    {
+      "name": "wallet-chemist"
+    },
+    {
+      "name": "wallet-clown"
+    },
+    {
+      "name": "wallet-cook"
+    },
+    {
+      "name": "wallet-privateinvestigator"
+    },
+    {
+      "name": "wallet-engineer"
+    },
+    {
+      "name": "wallet-farmer"
+    },
+    {
+      "name": "wallet-doctor"
+    },
+    {
+      "name": "wallet-rescuer"
+    },
+    {
+      "name": "wallet-shaftminer"
+    },
+    {
+      "name": "wallet-admin"
+    },
+    {
+      "name": "wallet-researcher"
+    },
+    {
+      "name": "wallet-deputy"
+    },
+    {
+      "name": "wallet-jailer"
+    },
+    {
+      "name": "wallet-reporter"
+    },
+    {
+      "name": "wallet-jrdeputy"
+    },
+    {
+      "name": "wallet-jrdoctor"
+    },
+    {
+      "name": "wallet-juniorresearcher"
+    },
+    {
+      "name": "wallet-juniorengineer"
+    },
+    {
+      "name": "wallet-courier"
+    },
+    {
+      "name": "wallet-craftsman"
+    },
+    {
+      "name": "wallet-sweeper"
+    },
+    {
+      "name": "wallet-switchboard"
+    },
+    {
+      "name": "equipped-IDCARD",
+      "directions": 4
+    }
+  ]
+}
