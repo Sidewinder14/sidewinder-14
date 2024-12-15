@@ -1,4 +1,9 @@
+
+
 # PUT YOUR TAGS IN ALPHABETICAL ORDER
+
+- type: Tag
+  id: Prybar
 
 - type: Tag
   id: SWMop
@@ -6,4 +11,17 @@
 - type: Tag
   id: SWMopBasic
 
+- type: Tag
+  id: SWMultitool
+
+- type: Tag
+  id: SWScrewdriver
+
+- type: Tag
+  id: SWWirecutter
+
+- type: Tag
+  id: SWWrench
+
 # PUT YOUR TAGS IN ALPHABETICAL ORDER
+

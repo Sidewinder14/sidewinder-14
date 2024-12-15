@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseCrowbar
+  name: prybar
+  id: Prybar
+  description: A steel prybar. You remembered to bring one this time!
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tools/prybar.rsi
+    state: icon
+  - type: Item
+    storedSprite:
+      sprite: _Sidewinder/Objects/Tools/prybar.rsi
+      state: storage
