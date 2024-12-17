@@ -16,7 +16,6 @@
     heldPrefix: default
     storedRotation: -90
   - type: Access
-  - type: IdCard
   - type: StationRecordKeyStorage
   - type: Tag
     tags:
@@ -26,7 +25,7 @@
     stealGroup: IDCard
 
 #IDs with layers
-#TODO: Remake all the jobs for - type: PresetIdCard
+#TODO: Remake all the jobs for - type: PresetIdCard - Sidewinder
 
 - type: entity
   parent: KeyStandard
