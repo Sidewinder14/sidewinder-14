@@ -16,6 +16,7 @@
     heldPrefix: default
     storedRotation: -90
   - type: Access
+  - type: IdCard
   - type: StationRecordKeyStorage
   - type: Tag
     tags:
