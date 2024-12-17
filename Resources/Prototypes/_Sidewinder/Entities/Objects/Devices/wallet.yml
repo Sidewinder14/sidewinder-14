@@ -139,6 +139,11 @@
     state: wallet
   - type: Pda
     state: wallet
+    paiSlot:
+      priority: -2
+      whitelist:
+        components:
+        - PAI
     penSlot:
       startingItem: Pen
       priority: -1
@@ -513,7 +518,7 @@
   description: A mahogany wallet with gold trim, pristine.
   components:
   - type: Pda
-    id: CaptainKey
+    id: MayorKey
     state: wallet-mayor
     penSlot:
       startingItem: PenCap
