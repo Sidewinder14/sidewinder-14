@@ -70,7 +70,7 @@
     sprite: _Sidewinder/Objects/Tanks/oxygen.rsi
 
 - type: entity
-  parent: GasTankRoundBase
+  parent: SW14GasTankRoundBase
   id: SW14NitrogenTank
   name: nitrogen tank
   description: An old metal gas tank. Label says can contains 5 litres of Nitrogen.
@@ -112,7 +112,7 @@
       Steel: 100
 
 - type: entity
-  parent: EmergencyOxygenTank
+  parent: SW14EmergencyOxygenTank
   id: SW14EmergencyNitrogenTank
   name: emergency nitrogen tank
   description: A Small metal gas tank, sleek and portable. Label says it contains 0.66 Litres of Nitrogen.

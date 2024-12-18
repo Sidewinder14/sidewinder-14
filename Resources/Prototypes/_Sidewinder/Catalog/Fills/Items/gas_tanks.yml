@@ -21,8 +21,8 @@
 # minutes = (moles / outputPressure) * 325
 
 - type: entity
-  id: SWOxygenTankFilled
-  parent: SWOxygenTank
+  id: SW14OxygenTankFilled
+  parent: SW14OxygenTank
   suffix: Filled
   components:
   - type: GasTank
@@ -35,8 +35,8 @@
       temperature: 293.15
 
 - type: entity
-  id: SWEmergencyOxygenTankFilled
-  parent: SWEmergencyOxygenTank
+  id: SW14EmergencyOxygenTankFilled
+  parent: SW14EmergencyOxygenTank
   suffix: Filled
   components:
   - type: GasTank
@@ -49,8 +49,8 @@
       temperature: 293.15
 
 - type: entity
-  id: SWEmergencyNitrogenTankFilled
-  parent: SWEmergencyNitrogenTank
+  id: SW14EmergencyNitrogenTankFilled
+  parent: SW14EmergencyNitrogenTank
   suffix: Filled
   components:
   - type: GasTank
@@ -64,8 +64,8 @@
       temperature: 293.15
 
 - type: entity
-  id: SWNitrogenTankFilled
-  parent: SWNitrogenTank
+  id: SW14NitrogenTankFilled
+  parent: SW14NitrogenTank
   suffix: Filled
   name: nitrogen tank
   components:
