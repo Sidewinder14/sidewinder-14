@@ -1,7 +1,7 @@
 - type: entity
   name: baseball bat
   parent: [BaseItem, BaseMinorContraband]
-  id: SWBaseBallBat
+  id: SW14BaseBallBat
   description: A sturdy wooden baseball bat.
   components:
   - type: Sprite
@@ -41,4 +41,4 @@
       Wood: 250
   - type: Tag
     tags:
-    - BaseballBat
+    - SW14BaseballBat

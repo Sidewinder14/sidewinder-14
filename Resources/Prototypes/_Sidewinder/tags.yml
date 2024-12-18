@@ -6,6 +6,9 @@
   id: Prybar
 
 - type: Tag
+  id: SW14BaseballBat
+
+- type: Tag
   id: SW14Cleaver
 
 - type: Tag

@@ -28,4 +28,4 @@
               doAfter: 4
         
     - node: bat
-      entity: SWBaseBallBat #Sidewinder
+      entity: SW14BaseBallBat #Sidewinder
