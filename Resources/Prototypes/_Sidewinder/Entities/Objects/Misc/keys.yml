@@ -1,0 +1,531 @@
+- type: entity
+  parent: Clothing
+  id: SW14KeyStandard
+  name: key
+  description: A common key fit for unlocking doors.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Misc/keys.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Sidewinder/Objects/Misc/keys.rsi
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+  - type: StealTarget
+    stealGroup: IDCard
+
+#IDs with layers
+#TODO: Remake all the jobs for - type: PresetIdCard - Sidewinder
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CitizenKey
+  name: citizen key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-citizen
+  - type: PresetIdCard
+    job: Passenger
+
+- type: entity
+  parent: SW14CitizenKey
+  id: SW14JrEngineerKey
+  name: junior engineer key
+  components:
+  - type: PresetIdCard
+    job: TechnicalAssistant
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-jrengineer
+
+- type: entity
+  parent: SW14CitizenKey
+  id: SW14JrDoctorKey
+  name: junior doctor key
+  components:
+  - type: PresetIdCard
+    job: MedicalIntern
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-jrdoctor
+
+- type: entity
+  parent: SW14CitizenKey
+  id: SW14JrResearcherKey
+  name: junior researcher key
+  components:
+  - type: PresetIdCard
+    job: ResearchAssistant
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-jrresearcher
+
+- type: entity
+  parent: SW14CitizenKey
+  id: SW14JrDeputyKey
+  name: junior deputy key
+  components:
+  - type: PresetIdCard
+    job: SecurityCadet
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-jrdeputy
+
+- type: entity
+  parent: [SW14KeyStandard, BaseGrandTheftContraband]
+  id: SW14MayorKey
+  name: mayor key
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: key-mayor
+  - type: Item
+    heldPrefix: gold
+  - type: PresetIdCard
+    job: Captain
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14DeputyKey
+  name: deputy key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-deputy
+  - type: PresetIdCard
+    job: SecurityOfficer
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14JailerKey
+  name: jailer key
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: key-jailer
+    - type: PresetIdCard
+      job: Warden
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14EngineerKey
+  name: engineer key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-engineer
+  - type: PresetIdCard
+    job: StationEngineer
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14DoctorKey
+  name: doctor key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-doctor
+  - type: PresetIdCard
+    job: MedicalDoctor
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ChemistKey
+  name: chemist key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-chemist
+  - type: PresetIdCard
+    job: Chemist
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CargoHaulerKey
+  name: cargo hauler key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-cargohauler
+  - type: PresetIdCard
+    job: CargoTechnician
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ShaftMinerKey
+  name: shaft miner key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-shaftminer
+  - type: PresetIdCard
+    job: SalvageSpecialist
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14PostmasterGeneralKey
+  name: postmaster general key
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: key-postmastergeneral
+    - type: Item
+      heldPrefix: default
+    - type: PresetIdCard
+      job: Quartermaster
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ResearcherKey
+  name: researcher key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-researcher
+  - type: PresetIdCard
+    job: Scientist
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ClownKey
+  name: clown key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-clown
+  - type: PresetIdCard
+    job: Clown
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ChaplainKey
+  name: chaplain key
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: key-chaplain
+    - type: PresetIdCard
+      job: Chaplain
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14SweeperKey
+  name: sweeper key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-sweeper
+  - type: PresetIdCard
+    job: Janitor
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14BartenderKey
+  name: bartender key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-bartender
+  - type: PresetIdCard
+    job: Bartender
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14PunPunKey
+  name: pun pun key
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: key-bartender
+    - type: PresetIdCard
+      job: Bartender
+      name: Pun Pun
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CookKey
+  name: cook key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-chef
+  - type: PresetIdCard
+    job: Chef
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14ReporterKey
+  name: reporter key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-reporter
+  - type: PresetIdCard
+    job: Reporter
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14RescuerKey
+  name: rescuer key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-rescuer
+  - type: PresetIdCard
+    job: Paramedic
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14FarmerKey
+  name: farmer key
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: key-farmer
+    - type: PresetIdCard
+      job: Botanist
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CEKey
+  name: chief engineer key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-chiefengineer
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ChiefEngineer
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14SurgeonGeneralKey
+  name: surgeon general key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-surgeongeneral
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ChiefMedicalOfficer
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14RDKey
+  name: research director key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-researchdirector
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ResearchDirector
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14SheriffKey
+  name: sheriff key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-sheriff
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: HeadOfSecurity
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CentcomKey
+  name: government agent key
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: key-cc
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentralCommandOfficial
+
+- type: entity
+  name: citizen key
+  parent: SW14KeyStandard
+  id: SW14AgentKey
+  suffix: Agent
+  components:
+  - type: PresetIdCard
+    job: Passenger
+  - type: Access
+    tags:
+    - Maintenance
+    - SyndicateAgent
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-citizen
+  - type: AgentIDCard
+  - type: ActivatableUI
+    key: enum.AgentIDCardUiKey.Key
+    inHandsOnly: true
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: ChameleonClothing
+    slot: [idcard]
+    default: SW14CitizenKey
+  - type: UserInterface
+    interfaces:
+      enum.AgentIDCardUiKey.Key:
+        type: AgentIDCardBoundUserInterface
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+
+- type: entity
+  name: citizen key
+  parent: SW14AgentKey
+  id: SW14NukieAgentKey
+  suffix: Nukie
+  components:
+  - type: Access
+    tags:
+    - Maintenance
+    - SyndicateAgent
+    - NuclearOperative
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14SyndicateKey
+  name: syndicate key
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14PrivateInvestigatorKey
+  name: private investigator key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-privateinvestigator
+  - type: PresetIdCard
+    job: Detective
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14CraftsmanKey
+  name: craftsman key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-craftsman
+  - type: PresetIdCard
+    job: CargoTechnician
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14SwitchboardOperatorKey
+  name: switchboard operator key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-switchboard
+  - type: PresetIdCard
+    job: CargoTechnician
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14MailmanKey
+  name: mailman key
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: key-mailman
+  - type: PresetIdCard
+    job: CargoTechnician
+
+- type: entity
+  parent: SW14KeyStandard
+  id: SW14UniversalKey
+  name: universal key
+  suffix: Admin
+  description: An ID card that gives you access beyond your wildest dreams.
+  components:
+  - type: Sprite
+    sprite:  _Sidewinder/Objects/Misc/keys.rsi
+    layers:
+    - state: admin
+  - type: Clothing
+    sprite: _Sidewinder/Objects/Misc/keys.rsi
+  - type: Item
+    heldPrefix: green
+  - type: IdCard
+    jobTitle: job-title-universal
+    jobIcon: JobIconAdmin
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
+    - NuclearOperative
+    - SyndicateAgent
