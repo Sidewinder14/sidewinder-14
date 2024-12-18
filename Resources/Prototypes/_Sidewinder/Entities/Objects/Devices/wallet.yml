@@ -632,7 +632,7 @@
   description: A brown wallet, covered in dust and dirt.
   components:
   - type: Pda
-    id: SweeperKey
+    id: SW14SweeperKey
     state: wallet-sweeper
   - type: Icon
     state: wallet-sweeper

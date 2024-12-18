@@ -423,7 +423,7 @@
     - DoorBumpOpener
   - type: ChameleonClothing
     slot: [idcard]
-    default: CitizenKey
+    default: SW14CitizenKey
   - type: UserInterface
     interfaces:
       enum.AgentIDCardUiKey.Key:
