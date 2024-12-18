@@ -1,6 +1,6 @@
 - type: entity
   parent: Clothing
-  id: KeyStandard
+  id: SW14KeyStandard
   name: key
   description: A common key fit for unlocking doors.
   abstract: true
@@ -29,8 +29,8 @@
 #TODO: Remake all the jobs for - type: PresetIdCard - Sidewinder
 
 - type: entity
-  parent: KeyStandard
-  id: CitizenKey
+  parent: SW14KeyStandard
+  id: SW14CitizenKey
   name: citizen key
   components:
   - type: Sprite
@@ -41,8 +41,8 @@
     job: Passenger
 
 - type: entity
-  parent: CitizenKey
-  id: JrEngineerKey
+  parent: SW14CitizenKey
+  id: SW14JrEngineerKey
   name: junior engineer key
   components:
   - type: PresetIdCard
@@ -53,8 +53,8 @@
     - state: key-jrengineer
 
 - type: entity
-  parent: CitizenKey
-  id: JrDoctorKey
+  parent: SW14CitizenKey
+  id: SW14JrDoctorKey
   name: junior doctor key
   components:
   - type: PresetIdCard
@@ -65,8 +65,8 @@
     - state: key-jrdoctor
 
 - type: entity
-  parent: CitizenKey
-  id: JrResearcherKey
+  parent: SW14CitizenKey
+  id: SW14JrResearcherKey
   name: junior researcher key
   components:
   - type: PresetIdCard
@@ -77,8 +77,8 @@
     - state: key-jrresearcher
 
 - type: entity
-  parent: CitizenKey
-  id: JrDeputyKey
+  parent: SW14CitizenKey
+  id: SW14JrDeputyKey
   name: junior deputy key
   components:
   - type: PresetIdCard
@@ -89,8 +89,8 @@
     - state: key-jrdeputy
 
 - type: entity
-  parent: [KeyStandard, BaseGrandTheftContraband]
-  id: MayorKey
+  parent: [SW14KeyStandard, BaseGrandTheftContraband]
+  id: SW14MayorKey
   name: mayor key
   components:
   - type: Sprite
@@ -110,8 +110,8 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: KeyStandard
-  id: DeputyKey
+  parent: SW14KeyStandard
+  id: SW14DeputyKey
   name: deputy key
   components:
   - type: Sprite
@@ -122,8 +122,8 @@
     job: SecurityOfficer
 
 - type: entity
-  parent: KeyStandard
-  id: JailerKey
+  parent: SW14KeyStandard
+  id: SW14JailerKey
   name: jailer key
   components:
     - type: Sprite
@@ -134,8 +134,8 @@
       job: Warden
 
 - type: entity
-  parent: KeyStandard
-  id: EngineerKey
+  parent: SW14KeyStandard
+  id: SW14EngineerKey
   name: engineer key
   components:
   - type: Sprite
@@ -146,8 +146,8 @@
     job: StationEngineer
 
 - type: entity
-  parent: KeyStandard
-  id: DoctorKey
+  parent: SW14KeyStandard
+  id: SW14DoctorKey
   name: doctor key
   components:
   - type: Sprite
@@ -158,8 +158,8 @@
     job: MedicalDoctor
 
 - type: entity
-  parent: KeyStandard
-  id: ChemistKey
+  parent: SW14KeyStandard
+  id: SW14ChemistKey
   name: chemist key
   components:
   - type: Sprite
@@ -170,8 +170,8 @@
     job: Chemist
 
 - type: entity
-  parent: KeyStandard
-  id: CargoHaulerKey
+  parent: SW14KeyStandard
+  id: SW14CargoHaulerKey
   name: cargo hauler key
   components:
   - type: Sprite
@@ -182,8 +182,8 @@
     job: CargoTechnician
 
 - type: entity
-  parent: KeyStandard
-  id: ShaftMinerKey
+  parent: SW14KeyStandard
+  id: SW14ShaftMinerKey
   name: shaft miner key
   components:
   - type: Sprite
@@ -194,8 +194,8 @@
     job: SalvageSpecialist
 
 - type: entity
-  parent: KeyStandard
-  id: PostmasterGeneralKey
+  parent: SW14KeyStandard
+  id: SW14PostmasterGeneralKey
   name: postmaster general key
   components:
     - type: Sprite
@@ -208,8 +208,8 @@
       job: Quartermaster
 
 - type: entity
-  parent: KeyStandard
-  id: ResearcherKey
+  parent: SW14KeyStandard
+  id: SW14ResearcherKey
   name: researcher key
   components:
   - type: Sprite
@@ -220,8 +220,8 @@
     job: Scientist
 
 - type: entity
-  parent: KeyStandard
-  id: ClownKey
+  parent: SW14KeyStandard
+  id: SW14ClownKey
   name: clown key
   components:
   - type: Sprite
@@ -232,8 +232,8 @@
     job: Clown
 
 - type: entity
-  parent: KeyStandard
-  id: ChaplainKey
+  parent: SW14KeyStandard
+  id: SW14ChaplainKey
   name: chaplain key
   components:
     - type: Sprite
@@ -244,8 +244,8 @@
       job: Chaplain
 
 - type: entity
-  parent: KeyStandard
-  id: SweeperKey
+  parent: SW14KeyStandard
+  id: SW14SweeperKey
   name: sweeper key
   components:
   - type: Sprite
@@ -256,8 +256,8 @@
     job: Janitor
 
 - type: entity
-  parent: KeyStandard
-  id: BartenderKey
+  parent: SW14KeyStandard
+  id: SW14BartenderKey
   name: bartender key
   components:
   - type: Sprite
@@ -268,8 +268,8 @@
     job: Bartender
 
 - type: entity
-  parent: KeyStandard
-  id: PunPunKey
+  parent: SW14KeyStandard
+  id: SW14PunPunKey
   name: pun pun key
   components:
     - type: Sprite
@@ -281,8 +281,8 @@
       name: Pun Pun
 
 - type: entity
-  parent: KeyStandard
-  id: CookKey
+  parent: SW14KeyStandard
+  id: SW14CookKey
   name: cook key
   components:
   - type: Sprite
@@ -293,8 +293,8 @@
     job: Chef
 
 - type: entity
-  parent: KeyStandard
-  id: ReporterKey
+  parent: SW14KeyStandard
+  id: SW14ReporterKey
   name: reporter key
   components:
   - type: Sprite
@@ -305,8 +305,8 @@
     job: Reporter
 
 - type: entity
-  parent: KeyStandard
-  id: RescuerKey
+  parent: SW14KeyStandard
+  id: SW14RescuerKey
   name: rescuer key
   components:
   - type: Sprite
@@ -317,8 +317,8 @@
     job: Paramedic
 
 - type: entity
-  parent: KeyStandard
-  id: FarmerKey
+  parent: SW14KeyStandard
+  id: SW14FarmerKey
   name: farmer key
   components:
     - type: Sprite
@@ -329,8 +329,8 @@
       job: Botanist
 
 - type: entity
-  parent: KeyStandard
-  id: CEKey
+  parent: SW14KeyStandard
+  id: SW14CEKey
   name: chief engineer key
   components:
   - type: Sprite
@@ -343,8 +343,8 @@
     job: ChiefEngineer
 
 - type: entity
-  parent: KeyStandard
-  id: SurgeonGeneralKey
+  parent: SW14KeyStandard
+  id: SW14SurgeonGeneralKey
   name: surgeon general key
   components:
   - type: Sprite
@@ -357,8 +357,8 @@
     job: ChiefMedicalOfficer
 
 - type: entity
-  parent: KeyStandard
-  id: RDKey
+  parent: SW14KeyStandard
+  id: SW14RDKey
   name: research director key
   components:
   - type: Sprite
@@ -371,8 +371,8 @@
     job: ResearchDirector
 
 - type: entity
-  parent: KeyStandard
-  id: SheriffKey
+  parent: SW14KeyStandard
+  id: SW14SheriffKey
   name: sheriff key
   components:
   - type: Sprite
@@ -385,8 +385,8 @@
     job: HeadOfSecurity
 
 - type: entity
-  parent: KeyStandard
-  id: CentcomKey
+  parent: SW14KeyStandard
+  id: SW14CentcomKey
   name: government agent key
   components:
   - type: Sprite
@@ -400,8 +400,8 @@
 
 - type: entity
   name: citizen key
-  parent: KeyStandard
-  id: AgentKey
+  parent: SW14KeyStandard
+  id: SW14AgentKey
   suffix: Agent
   components:
   - type: PresetIdCard
@@ -433,8 +433,8 @@
 
 - type: entity
   name: citizen key
-  parent: AgentKey
-  id: NukieAgentKey
+  parent: SW14AgentKey
+  id: SW14NukieAgentKey
   suffix: Nukie
   components:
   - type: Access
@@ -444,8 +444,8 @@
     - NuclearOperative
 
 - type: entity
-  parent: KeyStandard
-  id: SyndicateKey
+  parent: SW14KeyStandard
+  id: SW14SyndicateKey
   name: syndicate key
   components:
   - type: Sprite
@@ -457,8 +457,8 @@
     - SyndicateAgent
 
 - type: entity
-  parent: KeyStandard
-  id: PrivateInvestigatorKey
+  parent: SW14KeyStandard
+  id: SW14PrivateInvestigatorKey
   name: private investigator key
   components:
   - type: Sprite
@@ -469,8 +469,8 @@
     job: Detective
 
 - type: entity
-  parent: KeyStandard
-  id: CraftsmanKey
+  parent: SW14KeyStandard
+  id: SW14CraftsmanKey
   name: craftsman key
   components:
   - type: Sprite
@@ -481,8 +481,8 @@
     job: CargoTechnician
 
 - type: entity
-  parent: KeyStandard
-  id: SwitchboardOperatorKey
+  parent: SW14KeyStandard
+  id: SW14SwitchboardOperatorKey
   name: switchboard operator key
   components:
   - type: Sprite
@@ -493,8 +493,8 @@
     job: CargoTechnician
 
 - type: entity
-  parent: KeyStandard
-  id: MailmanKey
+  parent: SW14KeyStandard
+  id: SW14MailmanKey
   name: mailman key
   components:
   - type: Sprite
@@ -505,8 +505,8 @@
     job: CargoTechnician
 
 - type: entity
-  parent: KeyStandard
-  id: UniversalKey
+  parent: SW14KeyStandard
+  id: SW14UniversalKey
   name: universal key
   suffix: Admin
   description: An ID card that gives you access beyond your wildest dreams.
