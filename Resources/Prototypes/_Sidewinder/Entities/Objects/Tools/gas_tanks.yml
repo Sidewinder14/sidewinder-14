@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: BaseItem
-  id: SWGasTankBase
+  id: SW14GasTankBase
   components:
   - type: Sprite
     sprite: _Sidewinder/Objects/Tanks/generic.rsi
@@ -48,8 +48,8 @@
 
 - type: entity
   abstract: true
-  parent: SWGasTankBase
-  id: SWGasTankRoundBase
+  parent: SW14GasTankBase
+  id: SW14GasTankRoundBase
   components:
   - type: Tool
     qualities:
@@ -57,8 +57,8 @@
     speedModifier: 0.6 # fairly unwieldly but nice round surface
 
 - type: entity
-  parent: SWGasTankRoundBase
-  id: SWOxygenTank
+  parent: SW14GasTankRoundBase
+  id: SW14OxygenTank
   name: oxygen tank
   description: An old metal gas tank. Label says can contains 5 litres of Oxygen.
   components:
@@ -71,7 +71,7 @@
 
 - type: entity
   parent: GasTankRoundBase
-  id: SWNitrogenTank
+  id: SW14NitrogenTank
   name: nitrogen tank
   description: An old metal gas tank. Label says can contains 5 litres of Nitrogen.
   components:
@@ -83,8 +83,8 @@
     sprite: _Sidewinder/Objects/Tanks/red.rsi
 
 - type: entity
-  parent: SWGasTankRoundBase
-  id: SWEmergencyOxygenTank
+  parent: SW14GasTankRoundBase
+  id: SW14EmergencyOxygenTank
   name: emergency oxygen tank
   description: A Small metal gas tank, sleek and portable. Label says it contains 0.66 Litres of Oxygen.
   components:
@@ -113,7 +113,7 @@
 
 - type: entity
   parent: EmergencyOxygenTank
-  id: SWEmergencyNitrogenTank
+  id: SW14EmergencyNitrogenTank
   name: emergency nitrogen tank
   description: A Small metal gas tank, sleek and portable. Label says it contains 0.66 Litres of Nitrogen.
   components:
