@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: SW14ClothingSlingerBelt
+  name: slinger belt
+  description: a typical gunslinger's belt. holds all your guns and ammo!
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Clothing/Belt/holster.rsi
+  - type: Clothing
+    sprite: _Sidewinder/Clothing/Belt/holster.rsi
+  - type: Storage
+    grid:
+    - 0,0,3,1
+
+- type: entity
+  parent: [ClothingBeltStorageBase, BaseSyndicateContraband]
+  id: SW14ClothingSyndicateSlingerBelt
+  name: syndicate slinger belt
+  description: A customized slinger belt, on the inside theres a stitch that says Syndicate.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Clothing/Belt/syndieholster.rsi
+  - type: Clothing
+    sprite: _Sidewinder/Clothing/Belt/syndieholster.rsi
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,3,3
+    whitelist:
+      components:
+        - Gun
+        - BallisticAmmoProvider
+        - CartridgeAmmo
