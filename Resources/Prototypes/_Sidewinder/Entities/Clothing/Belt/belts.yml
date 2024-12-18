@@ -14,7 +14,7 @@
 
 - type: entity
   parent: [ClothingBeltStorageBase, BaseSyndicateContraband]
-  id: SWClothingSlingerBelt
+  id: SWClothingSyndicateSlingerBelt
   name: syndicate slinger belt
   description: A customized slinger belt, on the inside theres a stitch that says Syndicate.
   components:

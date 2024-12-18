@@ -6,6 +6,18 @@
   id: Prybar
 
 - type: Tag
+  id: SW14Cleaver
+
+- type: Tag
+  id: SW14CombatKnife
+
+- type: Tag
+  id: SW14KitchenKnife
+
+- type: Tag
+  id: SW14SurvivalKnife
+
+- type: Tag
   id: SWMop
   
 - type: Tag
