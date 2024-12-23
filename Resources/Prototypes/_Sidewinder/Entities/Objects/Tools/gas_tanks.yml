@@ -1,0 +1,125 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: SW14GasTankBase
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tanks/generic.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _Sidewinder/Objects/Tanks/generic.rsi
+  - type: Tag
+    tags:
+    - SWGasTank
+  - type: Clothing
+    quickEquip: false
+    sprite: _Sidewinder/Objects/Tanks/generic.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ActivatableUI
+    key: enum.SharedGasTankUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # If gas tank volume is changed, adjust MinimumTritiumOxyburnEnergy in Atmospherics.cs by the same proportions
+      volume: 5
+      temperature: 293.15
+    tankLowPressure: 30.0
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    attackRate: 0.8
+    damage:
+      types:
+        Blunt: 10
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 185
+  - type: StaticPrice
+    price: 30
+
+- type: entity
+  abstract: true
+  parent: SW14GasTankBase
+  id: SW14GasTankRoundBase
+  components:
+  - type: Tool
+    qualities:
+    - Rolling
+    speedModifier: 0.6 # fairly unwieldly but nice round surface
+
+- type: entity
+  parent: SW14GasTankRoundBase
+  id: SW14OxygenTank
+  name: oxygen tank
+  description: An old metal gas tank. Label says can contains 5 litres of Oxygen.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tanks/oxygen.rsi
+  - type: Item
+    sprite: _Sidewinder/Objects/Tanks/oxygen.rsi
+  - type: Clothing
+    sprite: _Sidewinder/Objects/Tanks/oxygen.rsi
+
+- type: entity
+  parent: SW14GasTankRoundBase
+  id: SW14NitrogenTank
+  name: nitrogen tank
+  description: An old metal gas tank. Label says can contains 5 litres of Nitrogen.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tanks/red.rsi
+  - type: Item
+    sprite: _Sidewinder/Objects/Tanks/red.rsi
+  - type: Clothing
+    sprite: _Sidewinder/Objects/Tanks/red.rsi
+
+- type: entity
+  parent: SW14GasTankRoundBase
+  id: SW14EmergencyOxygenTank
+  name: emergency oxygen tank
+  description: A Small metal gas tank, sleek and portable. Label says it contains 0.66 Litres of Oxygen.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tanks/emergency.rsi
+  - type: Item
+    size: Small
+    sprite: _Sidewinder/Objects/Tanks/emergency.rsi
+  - type: GasTank
+    air:
+      volume: 0.66
+      temperature: 293.15
+  - type: Clothing
+    sprite: _Sidewinder/Objects/Tanks/emergency.rsi
+    slots:
+    - Pocket
+    - Belt
+    - suitStorage
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+
+- type: entity
+  parent: SW14EmergencyOxygenTank
+  id: SW14EmergencyNitrogenTank
+  name: emergency nitrogen tank
+  description: A Small metal gas tank, sleek and portable. Label says it contains 0.66 Litres of Nitrogen.
+  components:
+  - type: Sprite
+    sprite: _Sidewinder/Objects/Tanks/emergency_red.rsi
+  - type: Item
+    sprite: _Sidewinder/Objects/Tanks/emergency_red.rsi
+  - type: Clothing
+    sprite: _Sidewinder/Objects/Tanks/emergency_red.rsi
