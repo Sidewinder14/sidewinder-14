@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprites by icepicked on discord for Sidewinder",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "centcom"
+    },
+    {
+      "name": "admin"
+    },
+    {
+      "name": "gold"
+    },
+    {
+      "name": "key-citizen"
+    },
+    {
+      "name": "key-bartender"
+    },
+    {
+      "name": "key-farmer"
+    },
+    {
+      "name": "key-switchboard"
+    },
+    {
+      "name": "key-mayor"
+    },
+    {
+      "name": "key-cargohauler"
+    },
+    {
+      "name": "key-cc"
+    },
+    {
+      "name": "key-chaplain"
+    },
+    {
+      "name": "key-chemist"
+    },
+    {
+      "name": "key-chiefengineer"
+    },
+    {
+      "name": "key-surgeongeneral"
+    },
+    {
+      "name": "key-clown"
+    },
+    {
+      "name": "key-chef"
+    },
+    {
+      "name": "key-privateinvestigator"
+    },
+    {
+      "name": "key-sheriff"
+    },
+    {
+      "name": "key-sweeper"
+    },
+    {
+      "name": "key-doctor"
+    },
+    {
+      "name": "key-postmastergeneral"
+    },
+    {
+      "name": "key-researchdirector"
+    },
+    {
+      "name": "key-researcher"
+    },
+    {
+      "name": "key-deputy"
+    },
+    {
+      "name": "key-shaftminer"
+    },
+    {
+      "name": "key-engineer"
+    },
+    {
+      "name": "key-reporter"
+    },
+    {
+      "name": "key-rescuer"
+    },
+    {
+      "name": "key-mailman"
+    },
+    {
+      "name": "key-craftsman"
+    },
+    {
+      "name": "key-jailer"
+    },
+    {
+      "name": "key-jrresearcher"
+    },
+    {
+      "name": "key-jrdeputy"
+    },
+    {
+      "name": "key-jrdoctor"
+    },
+    {
+      "name": "key-jrengineer"
+    },
+    {
+      "name": "syndie"
+    },
+    {
+      "name": "gold-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "gold-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "default-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "default-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "blue-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "blue-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "green-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "green-inhand-right",
+      "directions": 4
+    }
+  ]
+}
