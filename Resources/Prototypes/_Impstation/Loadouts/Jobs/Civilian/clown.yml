@@ -1,0 +1,16 @@
+- type: loadout
+  id: JokesterSuit
+  equipment:
+    jumpsuit: ClothingUniformJokester
+
+#OuterClothing
+- type: loadout
+  id: JokesterOuterCoat
+  equipment:
+    outerClothing: ClothingOuterCoatJokester
+
+- type: loadout
+  id: JokesterShoes
+  equipment:
+    shoes: ClothingShoesJokester
+

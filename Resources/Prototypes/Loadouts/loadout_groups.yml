@@ -420,6 +420,7 @@
   - ClownSkirt
   - JesterSuit
   - JesterAltSuit
+  - JokesterSuit # - Impstation/Sidewinder
 
 - type: loadoutGroup
   id: ClownBackpack
@@ -436,6 +437,7 @@
   loadouts:
   - ClownRobes
   - ClownWintercoat
+  - JokesterOuterCoat # - Impstation/Sidewinder
 
 - type: loadoutGroup
   id: ClownShoes
@@ -443,6 +445,7 @@
   loadouts:
   - ClownShoes
   - JesterShoes
+  - JokesterShoes # - Impstation/Sidewinder
 
 - type: loadoutGroup
   id: SurvivalClown
