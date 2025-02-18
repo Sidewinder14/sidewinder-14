@@ -31,7 +31,7 @@
   desc: reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
   flavor: ale
-  color: "#663100"
+  color: "#8d4b03" # Sidewinder
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/aleglass.rsi
