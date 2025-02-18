@@ -8,7 +8,7 @@
   desc: reagent-desc-absinthe
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: alcohol
-  color: "#33EE00"
+  color: "#303b21" # Sidewinder
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/absintheglass.rsi
     state: icon_empty

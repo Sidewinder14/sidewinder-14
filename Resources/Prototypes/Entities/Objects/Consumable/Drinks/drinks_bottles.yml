@@ -128,8 +128,8 @@
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
   id: DrinkAbsintheBottleFull
-  name: Jailbreaker Verte
-  description: One sip of this and you just know you're gonna have a good time.
+  name: The Green Fairy # Sidewinder
+  description: One sip of this and you just know you're going to start seeing things.
   components:
   - type: SolutionContainerManager
     solutions:

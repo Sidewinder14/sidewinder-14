@@ -152,7 +152,7 @@
         - ReagentId: Absinthe
           Quantity: 30
   - type: Icon
-    sprite: Objects/Consumable/Drinks/absintheglass.rsi
+    sprite: _Sidewinder/Objects/Consumables/Drinks/absinthebottle.rsi # Sidewinder
     state: icon
 
 - type: entity

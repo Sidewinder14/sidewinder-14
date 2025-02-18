@@ -159,7 +159,7 @@
 
 # Containers
 - type: entity
-  name: Jailbreaker Verte bottle
+  name: The Green Fairy # Sidewinder
   parent: DrinkBottleBaseEmpty
   id: DrinkBottleAbsinthe
   components:
