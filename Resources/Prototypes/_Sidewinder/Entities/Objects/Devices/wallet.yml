@@ -139,6 +139,11 @@
     state: wallet
   - type: Pda
     state: wallet
+    paiSlot:
+      priority: -2
+      whitelist:
+        components:
+        - PAI
     penSlot:
       startingItem: Pen
       priority: -1
@@ -180,7 +185,7 @@
   description: A brown leather wallet, devoid of any patches or markings. Held by most citizens.
   components:
   - type: Pda
-    id: PassengerIDCard
+    id: SW14CitizenKey
     state: wallet
 
 - type: entity
@@ -190,7 +195,7 @@
   description: A stained leather wallet, smells like beer.
   components:
   - type: Pda
-    id: BartenderIDCard
+    id: SW14BartenderKey
     state: wallet-barkeep
   - type: Icon
     state: wallet-barkeep
@@ -202,7 +207,7 @@
   description: A once sterile white wallet, now stained with dried blood and dirt.
   components:
   - type: Pda
-    id: MedicalIDCard
+    id: SW14DoctorKey
     state: wallet-doctor
   - type: Icon
     state: wallet-doctor
@@ -214,7 +219,7 @@
   description: A relatively clean wallet, only having small specs of dirt and dried blood.
   components:
   - type: Pda
-    id: MedicalInternIDCard
+    id: SW14JrDoctorKey
     state: wallet-jrdoctor
   - type: Icon
     state: wallet-jrdoctor
@@ -226,7 +231,7 @@
   description: A white leather wallet, a patch portraying three vials is stitched onto the front of it.
   components:
   - type: Pda
-    id: ChemistIDCard
+    id: SW14ChemistKey
     state: wallet-chemist
   - type: Icon
     state: wallet-chemist
@@ -238,7 +243,7 @@
   description: A beige wallet. A patch resembling train tracks is stitched onto the front.
   components:
   - type: Pda
-    id: CargoIDCard
+    id: SW14CargoHaulerKey
     state: wallet-cargohauler
   - type: Icon
     state: wallet-cargohauler
@@ -250,7 +255,7 @@
   description: A beige wallet. Covered in dirt and iron residue.
   components:
   - type: Pda
-    id: SalvageIDCard
+    id: SW14ShaftMinerKey
     state: wallet-shaftminer
   - type: Icon
     state: wallet-shaftminer
@@ -262,7 +267,7 @@
   description: A beige wallet. A patch resembling a envelope is stitched onto the face of it.
   components:
   - type: Pda
-    id: CargoIDCard #TODO: Change ID fron CargoIDCard to MailIDCard (make it)
+    id: SW14MailmanKey
     state: wallet-courier
   - type: Icon
     state: wallet-courier
@@ -274,7 +279,7 @@
   description: A brown wallet, covered in dirt. Has an earthy scent.
   components:
   - type: Pda
-    id: BotanistIDCard
+    id: SW14FarmerKey
     state: wallet-farmer
   - type: Icon
     state: wallet-farmer
@@ -286,7 +291,7 @@
   description: A once brown wallet, dipped in some unknown pink substance. Its oddly slippery.
   components:
   - type: Pda
-    id: ClownIDCard
+    id: SW14ClownKey
     state: wallet-clown
     penSlot:
       startingItem: CrayonOrange # no pink crayon?!?
@@ -326,7 +331,7 @@
   description: A brown wallet, covered in dried animal blood. A path with a cleaver on it is stitched to the front.
   components:
   - type: Pda
-    id: ChefIDCard
+    id: SW14CookKey
     state: wallet-cook
   - type: Icon
     state: wallet-cook
@@ -338,7 +343,7 @@
   description: A holy brown wallet, a cross is stitched to the front.
   components:
   - type: Pda
-    id: ChaplainIDCard
+    id: SW14ChaplainKey
     state: wallet-chaplin
   - type: Icon
     state: wallet-chaplin
@@ -350,7 +355,7 @@
   description: A brown wallet, a patch with a quill on it is stitched to the front. Smells like old ink.
   components:
   - type: Pda
-    id: ReporterIDCard
+    id: SW14ReporterKey
     state: wallet-reporter
     penSlot:
       startingItem: LuxuryPen #Replace with Quill
@@ -368,7 +373,7 @@
   description: A sterile white wallet, small specs of dirt cover the lower half of it.
   components:
   - type: Pda
-    id: ParamedicIDCard
+    id: SW14RescuerKey
     state: wallet-rescuer
   - type: Icon
     state: wallet-rescuer
@@ -381,7 +386,7 @@
   description: If you are not an admin please return this wallet to the nearest admin.
   components:
   - type: Pda
-    id: UniversalIDCard
+    id: SW14UniversalKey
     state: wallet-admin
   - type: Icon
     state: wallet-admin
@@ -405,7 +410,7 @@
   description: A black leather wallet, has a badge clipped onto the front that reads "Junior Deputy".
   components:
   - type: Pda
-    id: SecurityCadetIDCard
+    id: SW14JrDeputyKey
     state: wallet-jrdeputy
   - type: Icon
     state: wallet-jrdeputy
@@ -417,7 +422,7 @@
   description: A black leather wallet, has a magnifying glass stitched to the front. Smells like smoke.
   components:
   - type: Pda
-    id: DetectiveIDCard
+    id: SW14PrivateInvestigatorKey
     state: wallet-privateinvestigator
   - type: Icon
     state: wallet-privateinvestigator
@@ -429,7 +434,7 @@
   description: A black leather wallet, has a badge clipped onto the front that reads "Deputy".
   components:
   - type: Pda
-    id: SecurityIDCard
+    id: SW14DeputyKey
     state: wallet-deputy
   - type: Icon
     state: wallet-deputy
@@ -441,7 +446,7 @@
   description: A black leather wallet, has a patch portraying cell bars on it. Smells like justice.
   components:
   - type: Pda
-    id: WardenIDCard
+    id: SW14JailerKey
     state: wallet-jailer
   - type: Icon
     state: wallet-jailer
@@ -453,7 +458,7 @@
   description: A orange-ish wallet, smells like oil and grease. A Wrench is stitched onto the front.
   components:
   - type: Pda
-    id: EngineeringIDCard
+    id: SW14EngineerKey
     state: wallet-engineer
   - type: Icon
     state: wallet-engineer
@@ -465,7 +470,7 @@
   description: A orange-ish wallet, small splotches of oil are stained onto the front.
   components:
   - type: Pda
-    id: TechnicalAssistantIDCard
+    id: SW14JrEngineerKey
     state: wallet-juniorengineer
   - type: Icon
     state: wallet-juniorengineer
@@ -477,7 +482,7 @@
   description: A orange-ish wallet, a patch protraying three nails is stitched to the front of it.
   components:
   - type: Pda
-    id: TechnicalAssistantIDCard #TODO: Make a Crafstman ID/Key
+    id: SW14CraftsmanKey
     state: wallet-craftsman
   - type: Icon
     state: wallet-craftsman
@@ -489,7 +494,7 @@
   description: a wallet with purple trim, a patch with a lightbulb is stitched onto the front.
   components:
   - type: Pda
-    id: ResearchAssistantIDCard
+    id: SW14JrResearcherKey
     state: wallet-juniorresearcher
   - type: Icon
     state: wallet-juniorresearcher
@@ -501,7 +506,7 @@
   description: a white wallet with purple trim, smells like science.
   components:
   - type: Pda
-    id: ResearchIDCard
+    id: SW14ResearcherKey
     state: wallet-researcher
   - type: Icon
     state: wallet-researcher
@@ -513,7 +518,7 @@
   description: A mahogany wallet with gold trim, pristine.
   components:
   - type: Pda
-    id: CaptainIDCard
+    id: SW14MayorKey
     state: wallet-mayor
     penSlot:
       startingItem: PenCap
@@ -531,7 +536,7 @@
   description: A black leather wallet with gold trim. A piece of paper is stitched into the front of it with gold.
   components:
   - type: Pda
-    id: CaptainIDCard
+    id: SW14CentcomKey
     state: wallet-secretary
     penSlot:
       startingItem: PenCap
@@ -549,7 +554,7 @@
   description: A black leather wallet with gold trim. nothing is stitched to the front, they mean business.
   components:
   - type: Pda
-    id: CentcomIDCard
+    id: SW14CentcomKey
     state: wallet-cc
     penSlot:
       startingItem: PenCentcom
@@ -567,7 +572,7 @@
   description: A mahogany wallet with gold trim, a patch portraying a nut is stitched to the front in gold.
   components:
   - type: Pda
-    id: CEIDCard
+    id: SW14CEKey
     state: wallet-chief-engineer
   - type: Icon
     state: wallet-chief-engineer
@@ -579,7 +584,7 @@
   description: A mahogany wallet with gold trim, a patch portraying a surture and needle is stitched to the front in gold.
   components:
   - type: Pda
-    id: CMOIDCard
+    id: SW14SurgeonGeneralKey
     state: wallet-surgeon-general
   - type: Icon
     state: wallet-surgeon-general
@@ -591,7 +596,7 @@
   description: A mahogany wallet with gold trim, smells like abuse of authority.
   components:
   - type: Pda
-    id: HoSIDCard
+    id: SW14SheriffKey
     state: wallet-sheriff
   - type: Icon
     state: wallet-sheriff
@@ -603,7 +608,7 @@
   description: A mahogany wallet with gold trim, a patch portraying a envelope is stitched to the front in gold.
   components:
   - type: Pda
-    id: QuartermasterIDCard
+    id: SW14PostmasterGeneralKey
     state: wallet-postmaster-general
   - type: Icon
     state: wallet-postmaster-general
@@ -615,7 +620,7 @@
   description: A mahogany wallet with gold trim, it feels like progress.
   components:
   - type: Pda
-    id: RDIDCard
+    id: SW14RDKey
     state: wallet-research-director
   - type: Icon
     state: wallet-research-director
@@ -627,7 +632,7 @@
   description: A brown wallet, covered in dust and dirt.
   components:
   - type: Pda
-    id: JanitorIDCard
+    id: SW14SweeperKey
     state: wallet-sweeper
   - type: Icon
     state: wallet-sweeper
@@ -639,7 +644,7 @@
   description: A beige wallet, a patch portraying a switchboard cord is stitched to the front.
   components:
   - type: Pda
-    id: CargoIDCard
+    id: SW14SwitchboardOperatorKey
     state: wallet-switchboard
   - type: Icon
     state: wallet-switchboard
